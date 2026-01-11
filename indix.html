@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My assignmant 5 </title>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -27,9 +28,9 @@
                 </div>
      </div>
      <div class="flex justify-center mt-11">
-          <p class="h-6 ml-8 font-bold border border-white rounded-xl bg-green-50">0 <i class="font-bold text-red-700 fa-solid fa-heart "></i> </p>
+          <p  class="h-6 ml-8 font-bold border border-white rounded-xl bg-green-50"> <span>0</span> <i class="font-bold text-red-700 fa-solid fa-heart "></i> </p>
           <p class="h-6 ml-8 font-bold border border-white rounded-xl bg-green-50"> <span>100</span> <i class="fa-solid fa-coins"></i></p>
-          <p class="h-10 px-4 pt-2 ml-8 font-bold text-white bg-green-500 border border-white rounded-xl"> <span>0</span> Coppy </p>
+          <p class="h-10 px-4 pt-2 ml-8 font-bold text-white bg-green-500 border border-white rounded-xl"> <span id="copy-count-11">0</span> copy </p>
 
      </div>
     </div>
@@ -53,15 +54,18 @@
                     <img src="assets/emergency.png" class="w-14 h-14 mb-4 border-1 border-white bg-[#FFE3E2] rounded-xl p-4 " alt="">
                  <h1 class="mt-2 font-bold ">National Emergency Number</h1>
                  <p class="text-gray-400">National Emergency</p>
-                 <h1 class="mt-6 font-bold">999</h1>
-                 <p class="mt-2 text-gray-400">All</p>
+                 <h1 id=" " class="mt-6 font-bold ">999</h1>
+                 <p id="red" class="mt-2 text-gray-400 ">All</p>
                  <div class="mt-6">
-                   <button onclick="copy()" class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Copy</button>
+                <button onclick=" copy()" id="copy-1-main" class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"> </i> Copy</button>
                  <button class="font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14 ml-14"><i class="fa-solid fa-phone"></i>Call</button>
-                 </div>
-                    </div>
+                 </div>    </div>
                 
-                 <div><i class="fa-regular fa-heart"></i></div>
+                 <div> 
+                  <i class="fa-regular fa-heart"></i>
+                
+                  
+                </div>
                 </div>
            
                
@@ -73,7 +77,7 @@
                  <h1 class="mt-6 font-bold ">999</h1>
                  <p class="mt-2 text-gray-400">police</p>
                  <div class="mt-6">
-                   <button class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Coppy</button>
+                  <button onclick=" copy()"  class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Copy</button>
                  <button class="ml-10 font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14 "><i class="fa-solid fa-phone"></i>Call</button>
                  </div>
                   </div>
@@ -88,7 +92,7 @@
                  <h1 class="mt-6 font-bold">999</h1>
                  <p class="mt-2 text-gray-400">fire</p>
                  <div class="mt-6">
-                   <button class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Coppy</button>
+                   <button onclick=" copy()"  class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Copy</button>
                  <button class="ml-10 font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14"><i class="fa-solid fa-phone"></i>Call</button>
                  </div>
                   </div>
@@ -101,9 +105,9 @@
                  <h1 class="mt-2 font-bold ">Ambulance Service</h1>
                  <p class="text-gray-400">Ambulance</p>
                  <h1 class="mt-6 font-bold">1994-999999</h1>
-                 <p class="mt-2 text-gray-400">Health</p>
+                 <p id="red-1" class="mt-2 text-gray-400">Health</p>
                  <div class="mt-6">
-                   <button class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Coppy</button>
+                   <button onclick="copp2()" class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Copy</button>
                  <button class="ml-10 font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14"><i class="fa-solid fa-phone"></i>Call</button>
                  </div>
                  
@@ -121,7 +125,7 @@
                  <h1 class="mt-6 font-bold">109</h1>
                  <p class="mt-2 text-gray-400">help</p>
                  <div class="mt-6">
-                   <button class="rounded-lg btn btn-soft px-7"><i class="fa-regular fa-copy"></i>Coppy</button>
+                   <button onclick="copy3()" class="rounded-lg btn btn-soft px-7"><i class="fa-regular fa-copy"></i>Copy</button>
                  <button class="ml-10 font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14 "><i class="fa-solid fa-phone"></i>Call</button>
                  </div>
                
@@ -137,7 +141,7 @@
                  <h1 class="mt-6 font-bold">106</h1>
                  <p class="mt-2 text-gray-400">govt.</p>
                  <div class="mt-6">
-                   <button class="rounded-lg btn btn-soft px-7"><i class="fa-regular fa-copy"></i>Coppy</button>
+                   <button onclick="copy4()" class="rounded-lg btn btn-soft px-7"><i class="fa-regular fa-copy"></i>Copy</button>
                  <button class="ml-10 font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14 "><i class="fa-solid fa-phone"></i>Call</button>
                  </div>
                   </div>
@@ -152,7 +156,7 @@
                  <h1 class="mt-6 font-bold">16216</h1>
                  <p class="mt-2 text-gray-400">Electricity</p>
                  <div class="mt-6">
-                   <button class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Coppy</button>
+                   <button onclick="copy5()" class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Copy</button>
                  <button class="ml-10 font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14"><i class="fa-solid fa-phone"></i>Call</button>
                  </div>
                   </div>
@@ -168,7 +172,7 @@
                  <h1 class="mt-6 font-bold">16216</h1>
                  <p class="mt-2 text-gray-400">Electricity</p>
                  <div class="mt-6">
-                   <button class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Coppy</button>
+                   <button onclick="copy5()" class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Copy</button>
                  <button class="ml-10 font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14"><i class="fa-solid fa-phone"></i>Call</button>
                  </div>
                   </div>
@@ -184,7 +188,7 @@
                  <h1 class="mt-6 font-bold">16445</h1>
                  <p class="mt-2 text-gray-400">NGO</p>
                  <div class="mt-6">
-                   <button class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Coppy</button>
+                   <button onclick="copy6()" class="rounded-lg btn btn-soft px-7 "><i class="fa-regular fa-copy"></i>Copy</button>
                  <button class="ml-10 font-bold text-white bg-green-800 rounded-lg btn btn-soft px-14"><i class="fa-solid fa-phone"></i>Call</button>
                  </div>
                      
@@ -204,5 +208,8 @@
      
         
     </div>
-                   
+
+    <script src="style.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+       
 </html> 
